@@ -44,20 +44,7 @@
         var uReverse = false;
         var vReverse = false;
         var hotspots = {};
-        
-       function load(){
-         var width=document.documentElement.clientWidth;
-         var height=document.documentElement.clientHeight;
-         
-         var bodyDoc=document.getElementById('bodyId');
-         bodyDoc.style.width=width+'px';
-         bodyDoc.style.height=height+'px';
-         
-         var ga=document.getElementById('bodyId);
-         ga.style.width=height+'px';
-         ga.style.height=width+'px';
-         ga.style.top=(height-width)/2+"px";
-         ga.style.left=-(height-width)/2+"px";
+
         
         keyshotXR = new keyshotXR(nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots);
       }

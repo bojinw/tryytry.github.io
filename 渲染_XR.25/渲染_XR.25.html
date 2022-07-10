@@ -20,8 +20,8 @@
       function initKeyShotXR() {
         var nameOfDiv = "KeyShotXR";
         var folderName = "渲染_XR.25";
-        var viewPortWidth = 806;
-        var viewPortHeight = 1372;
+        var viewPortWidth = 1372;
+        var viewPortHeight = 806;
         var backgroundColor = "#FFFFFF";
         var uCount = 18;
         var vCount = 9;
@@ -45,15 +45,23 @@
         var vReverse = false;
         var hotspots = {};
         
+       function load(){
+         var width=document.documentElement.clientWidth;
+         var height=document.documentElement.clientHeight;
+         
+         var bodyDoc=document.getElementById('bodyId');
+         bodyDoc.style.width=width+'px';
+         bodyDoc.style.height=height+'px';
+         
+         var ga=document.getElementById('bodyId);
+         ga.style.width=height+'px';
+         ga.style.height=width+'px';
+         ga.style.top=(height-width)/2+"px";
+         ga.style.left=-(height-width)/2+"px";
+        
         keyshotXR = new keyshotXR(nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots);
       }
       
-       imgId { 
-                transform: rotate(90deg) !important;
-                position:absolute;
-                width:calc(100vh);
-                height:calc(100vw);
-       }
 
       window.onload = initKeyShotXR;
     </script>
